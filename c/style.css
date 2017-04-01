@@ -1,4 +1,4 @@
-html body {
+    html body {
     font-family: 'Roboto', Helvetica, Verdana, Sans-Serif;
     font-size: 100%;
     line-height: 1.5;
@@ -13,16 +13,17 @@ html body {
 
 a {
     color: #fafafa;
+    text-decoration: underline;
 }
 
 nav li a {
-    text-decoration: none;
+/*    text-decoration: none;*/
 }
 
 a:hover,
 a:active {
     color: #64fcfa;
-    text-decoration: none;
+    /*    text-decoration: none;*/
 }
 
 article,
@@ -30,7 +31,8 @@ article,
     display: block;
     margin: auto;
     width: auto;
-    max-width: 100vh;
+    max-width: 97vh;
+    /*schmaler?*/
 }
 
 body {
@@ -70,14 +72,14 @@ h3 {
     font-size: 2em;
     padding-top: 4vh;
     padding-bottom: 2vh;
-    padding-left: 1vw;
+    /*  padding-left: 1vw;*/
 }
 
 
 /*Section unterueberschriften */
 
 h4 {
-    font-size: 2em;
+    font-size: 1.5em;
     padding-top: 1vh;
     padding-bottom: 1vh;
 }
@@ -189,8 +191,6 @@ section {
 
 /*Classen*/
 
-
-
 .avatar {
     float: right;
     width: 30vw;
@@ -201,8 +201,8 @@ section {
 #box {
     border: 5px solid white;
     border-radius: 5px;
-
 }
+
 .impressum {
     margin: 5vw;
 }
@@ -240,9 +240,13 @@ section {
     display: table;
 }
 
+.selected {
+    color: #64fcfa;
+}
+
 .text {
     float: left;
-    padding-bottom: 8vh;
+    padding-bottom: 5vh;
 }
 
 .deut {
@@ -266,7 +270,9 @@ section {
 .one,
 .two,
 .three,
-.four,
+
+/*.four,*/
+
 .last {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -288,12 +294,29 @@ section {
     background-color: #f1be57;
 }
 
-.four {
+
+/*.four {
     background-color: #66ccff;
-}
+}*/
 
 .last {
     background-color: #35e4ca;
+}
+
+#hiddenone {
+    display: none;
+}
+
+#hiddentwo {
+    display: none;
+}
+
+#hiddenthree {
+    display: none;
+}
+
+#hiddenlast {
+    display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -314,9 +337,9 @@ section {
         font-size: 1.5em;
         padding-top: 3vh;
     }
-    h4 {
+    /*    h4 {
         font-size: 1.5em;
-    }
+    }*/
     nav li {
         padding: 1vw;
     }
@@ -330,21 +353,21 @@ section {
         float: none;
         width: 50vw;
         padding-bottom: 1vw;
-       display: block;
-    margin: auto;
-   /* width: 40%;*/
+        display: block;
+        margin: auto;
+        /* width: 40%;*/
     }
     #box {
-    border: 3px solid white;
-    border-radius: 3px;
-}
+        border: 3px solid white;
+        border-radius: 3px;
+    }
     .logofont {
         max-width: 70vw;
     }
     .sozial {
         font-size: 1.2em;
         display: flex;
-    justify-content:space-around;
+        justify-content: space-around;
     }
     .deut,
     .engl {
@@ -354,22 +377,20 @@ section {
         padding-bottom: 0;
     }
     .deut {
-        padding-bottom: 3vh;
+        padding-bottom: 1vh;
     }
     .engl {
-        padding-bottom: 8vh;
+        padding-bottom: 2vh;
     }
-
-
-@media only screen and (max-width: 400px) {
-    .up,
-    .down {
-        font-size: 25px;
+    @media only screen and (max-width: 400px) {
+        .up,
+        .down {
+            font-size: 25px;
+        }
+        nav li {
+            font-size: 1.5em;
+        }
+        h4 {
+            font-size: 1em;
+        }
     }
-    nav li {
-        font-size: 1.5em;
-    }
-    h4 {
-        font-size: 1em;
-    }
-}
