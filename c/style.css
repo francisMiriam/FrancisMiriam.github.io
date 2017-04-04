@@ -295,7 +295,9 @@ wenn also etwas runtergescroll wurde */
     .last {
         background-color: #35e4ca;
     }
-    
+    #hiddenzero {
+        display: none;
+    }
     #hiddenone {
         display: none;
     }
