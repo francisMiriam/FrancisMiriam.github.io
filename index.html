@@ -7,17 +7,14 @@
     <title> Francis Stieglitz</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,400i" rel="stylesheet">
     <link rel="stylesheet" href="c/reset.css">
-    <!-- matthias: flexslider.css NICHT vor das reset! -->
     <link rel="stylesheet" href="c/flexslider.css">
     <link rel="stylesheet" href="c/style.css">
 </head>
 
 <body>
     <header>
-        <!-- matthias: in ein Div zusammengepackt, um es animiert verschwinden zu lassen -->
         <div class="name">
             <img class="logofont" src="p/francis3.png" alt="Francis Stieglitz">
-            <!--  <h2>Communication design</h2> -->
         </div>
         <nav id="menu-center">
             <ul>
@@ -154,7 +151,7 @@
                         </div>
                     </article>
                     <div class="past">
-                        <a id="togglezero">weitere Projekte...</a>
+                        <a class="shadow" id="togglezero">weitere Projekte...</a>
                     </div>
                     <div id="hiddenzero">
                         <article>
@@ -328,7 +325,7 @@
                         </div>
                     </article>
                     <div class="past">
-                        <a id="toggletwo">weitere Projekte...</a>
+                        <a class="shadow" id="toggletwo">weitere Projekte...</a>
                     </div>
                     <div id="hiddentwo">
                         <article>
@@ -498,7 +495,7 @@
                         </div>
                     </article>
                     <div class="past">
-                        <a id="toggleone">weitere Projekte...</a>
+                        <a class="shadow" id="toggleone">weitere Projekte...</a>
                     </div>
                     <div id="hiddenone">
                         <article>
@@ -653,7 +650,7 @@
                         </div>
                     </article>
                     <div class="past">
-                        <a id="togglethree">weitere Projekte...</a>
+                        <a class="shadow" id="togglethree">weitere Projekte...</a>
                     </div>
                     <div id="hiddenthree">
                         <article>
@@ -728,29 +725,25 @@
                         </figure>
                         <div>
                             <div>
-                                <p>Kontakt:
-                                    <br> Francis Stieglitz
+                                <p>Francis Miriam Stieglitz
                                     <br> Aindorferstr. 78
                                     <br> 80689 München
                                     <br> Email</p>
                                 <br>
                             </div>
-                            <div class="deut">
+                            <div class="past deut">
                                 <p>Hi, mein Name ist Francis Miriam Stieglitz und ich lebe und arbeite in München. Seit 2016 bin ich Studentin an der Hochschule für angewandte Wissenschaft München im Fach Kommunikationsdesign.
-                                    <ul style="list-style-type:none">
-                                        <li>2011 – 2015 Bachelor of Arts an der Ludwig-Maximilians-Universität München in den Fächern Kunstpädagogik BA (HF), Philosophie (NF)</li>
-                                        <li> 2010 – 2011 International Munich Art Lab (Imal).</li>
-                                        <li>Seit 2014 Galerieassistentin, Galerie artroom 9, Hesseloherstraße.</li>
-                                        <li> Seit 2014 Übungsleitung für Kunst an der Mittelschule an der Peslmüllerstraße</li>
-                                    </ul>
-                                </p>
+                                        2011&nbsp;–&nbsp;2015 Bachelor of Arts an der Ludwig-Maximilians-Universität München in den Fächern Kunstpädagogik BA (HF), Philosophie (NF)
+                                         2010&nbsp;–&nbsp;2011 teilnahme am "International Munich Art Lab" (Imal).
+                                        Seit&nbsp;2014 Galerieassistentin, Galerie artroom 9, Hesseloherstraße.
+                                         Seit&nbsp;2014 Übungsleitung für Kunst an der Mittelschule an der Peslmüllerstraße </p>
                             </div>
                             <div class="past engl">
                                 <p>Hi, my name is Francis Miriam Stieglitz and I live and work in Munich. I have been studying communication design at the Hochschule für angewandte Wissenschaft München (University of Applied Science in Munich) since 2016.
-                                    <br>2011 – 2015 Bachelor of Arts at the LMU in Munich in art education (main subject) and philosophy (minor subject).
-                                    <br>2010 – 2011: International Munich Art Lab (Imal).
-                                    <br>Since 2014 assistant at the gallery artroom 9 in Munich.
-                                    <br>Since 2014 assistant teacher for art at a junior high school (Peslmüllerstraße.)</p>
+                                    2011&nbsp;–&nbsp;2015 Bachelor of Arts at the LMU in Munich in art education (main subject) and philosophy (minor subject).
+                                    2010&nbsp;–&nbsp;2011: International Munich Art Lab (Imal).
+                                    Since&nbsp;2014 assistant at the gallery "artroom 9" in Munich.
+                                    Since&nbsp;2014 assistant teacher for art at the junior high school (Mittelschule an der Peslmüllerstraße.)</p>
                             </div>
                             <div class="past deut sozial">
                                 <a href="mailto:someone@example.com?Subject=Hello%20again">Email</a>
@@ -857,18 +850,12 @@ $(document).ready(function() {
     });
 });
 
-// <!-- hier die Angaben zur Slideshow Animation -->
+// <!--Slideshow -->
 $(window).load(function() {
     $('.flexslider').flexslider({
         animation: "slide",
-        // matthias: "false" bewirkt, dass slideshow nicht von alleine losläuft
         slideshow: false,
-        // Schleife läuft endlos 
         animationLoop: true,
-        // Befindet sich der Cursor über den Bilder, hält die Animation an
-        // pauseOnHover: true,
-        // // das jeweilige Bild bleibt 3 sek (3000 Mili-Sekunden) stehen
-        // slideshowSpeed: 3000
         start: function(slider) { // Fires when the slider loads the first slide
             var slide_count = slider.count - 1;
 
@@ -917,8 +904,7 @@ function onScroll(event) {
         }
     });
 
-    // matthias: fügt beim Scrollen bei header die Klasse "verkleinert" ein
-    // Rest erledigt CSS!
+    // Klasse "verkleinert" 
     if ($(window).scrollTop() > 0) {
         $('header').addClass('verkleinert');
     } else {

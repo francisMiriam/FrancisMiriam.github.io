@@ -1,386 +1,355 @@
-        html body {
-        font-family: 'Roboto', Helvetica, Verdana, Sans-Serif;
-        font-size: 100%;
-        line-height: 1.5;
-        font-size-adjust: 0.58;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: #2abba6;
-        background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233affe2' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-        color: #fafafa;
-    }
-    
-    a {
-        color: #fafafa;
-        text-decoration: underline;
-        cursor:pointer;
-    }
-    
-    
-    a:hover{
-        color: #5ba3c5;
-        /*    text-decoration: none;*/
-    }
-    a:active {
-        color: #9bdfff;
-        /*    text-decoration: none;*/
-    }
-
-    
-    article,
-    .center {
-        display: block;
-        margin: auto;
-        width: auto;
-        max-width: 97vh;
-        /*schmaler?*/
-    }
-    
-    body {
-        line-height: 1.45;
-        /*Umbrüche*/
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
-        hyphens: auto;
-    }
-    
-    figcaption {
-        text-align: center;
-        display: none;
-    }
-    
-    footer {
-        background-color: #2abba6;
-        background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233affe2' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-        padding-left: 2%;
-        padding-top: 2%;
-        padding-bottom: 1%;
-        border-left: 10px solid #2abba6;
-        border-right: 10px solid #2abba6;
-        border-bottom: 10px solid #2abba6;
-        /*  display: none;*/
-    }
-    
-   /* h2,
-    h5 {
-        font-size: 1.8em;
-    }*/
-    /*Sections ueberschriften*/
-    
-    h3 {
-        font-size: 2em;
-        padding-top: 4vh;
-        padding-bottom: 2vh;
-        /*  padding-left: 1vw;*/
-    }
-    /*Section unterueberschriften */
-    
-    h4 {
-        font-size: 1.5em;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-    }
-    
-    header {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: auto;
-        height: 18vh;
-        /* matthias: Wie lange soll der Übergang beim Scrollen sein? */
-        transition: all .1s ease-in-out;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-        border-left: 10px solid #2abba6;
-        border-right: 10px solid #2abba6;
-        border-top: 10px solid #2abba6;
-    }
-    
-    header div.name {
-        /* matthias: Wie lange soll der Übergang beim Scrollen sein? */
-        transition: all .3s ease-in-out;
-        position: absolute;
-        left: 8px;
-        top: 0;
-    }
-    /* matthias: Klasse "verkleinert" wird von JS hinzugefügt,
-wenn die Scrollposition im Browser > 0 ist;
-wenn also etwas runtergescroll wurde */
-    
-    header.verkleinert {
-        height: 4vh;
-        min-height: 50px;
-        width: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 10000;
-        /* kleiner Schatten, wenn man hochscrollt */
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-        border: none;
-        background-color: #2abba6;
-        background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233affe2' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-    }
-    /* matthias: Sollen die Überschriften dann ausgeblendet werden? */
-    
-    header.verkleinert div.name {
-        /* schiebt Name usw. nach links raus */
-        top: -600px;
-    }
-    
-    header.verkleinert nav.current {
-        /* schiebt Name usw. nach links raus */
-        display: none;
-    }
-    
-    header.verkleinert nav {
-        height: 5vh;
-        min-height: 50px;
-        width: 100%;
-        top: 0;
-    }
-    
-    header.verkleinert nav ul {
-        /*     padding-top: inherit;*/
-    }
-    
-    img {
-        width: 100%;
-        height: auto;
-    }
-    
-    main {
-        overflow: auto;
-        width: auto;
-    }
-    
-    nav {
-        width: 100%;
-        height: auto;
-        /*10vh*/
-        position: absolute;
-        top: 12vh;
-    }
-    
-    nav ul {
-        list-style-type: none;
-    }
-    
-    nav li {
-        float: right;
-        font-size: 2.1em;
-        margin: 2vh, 0, 1vh, 0;
-    }
-    
-    section {
-        width: auto;
-        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-    }
-    span{
-        font-size: 0.7em;
-        font-style: italic;
-    }
-     p {
-        font-size: 0.875em;
-        text-align: justify;
-    }
-
-    /*Classen*/
-    
-    .active {
-        color: #5ba3c5;
-    }
-
-    .avatar {
-        float: right;
-        width: 30vw;
-        padding-right: 7vw;
-        max-width: 300px;
-    }
-    
-    #box {
-        border: 5px solid white;
-        border-radius: 5px;
-    }
-    
-    
-    .logofont {
-        width: auto;
-    }
-    
-    .sozial {
-        font-size: 1.1em;
-        margin-top: 2vh;
-    }
-
-    .past{
-        padding-bottom: 2vh;
-
-    }
-    /*Menu classen*/
-    
-    .about {
-        padding-right: 5vw;
-    }
-    
-    .block {
-        padding-right: 5vw;
-    }
-    /*Text classen*/
-    
-    .descript {
-        width: auto;
-    }
-    
-    .descript::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    .selected {
-        color: #64fcfa;
-    }
-    
-    .text {
-        float: left;
-        padding-bottom: 3vh;
-    }
-    .lasttext{
-        float: left;
-        padding-bottom: 1vh;
-    }
-    
-    .deut {
-        width: 47%;
-        max-width: 700px;
-        padding-right: 20px;
-    }
-    
-    .engl {
-        width: 47%;
-        max-width: 700px;
-        font-style: italic;
-        color: #f6f6f6;
-    }
-    
-    .zero,
-    .one,
-    .two,
-    .three,
-    /*.four,*/
-    
-    .last {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-    
-    .zero {
-        background-color: #8294fe;
-    }
-    
-    .one {
-        background-color: #f38e62;
-    }
-    
-    .two {
-        background-color: #b28de2;
-    }
-    
-    .three {
-        background-color: #f1be57;
-    }
-    /*.four {
-    background-color: #66ccff;
-}*/
-    
-    .last {
-        background-color: #35e4ca;
-    }
-    #hiddenzero {
-        display: none;
-    }
-    #hiddenone {
-        display: none;
-    }
-    
-    #hiddentwo {
-        display: none;
-    }
-    
-    #hiddenthree {
-        display: none;
-    }
-    
-    #hiddenlast {
-        display: none;
-    }
-    
-    @media only screen and (max-width: 800px) {
-        nav li {
-            font-size: 1.5em;
+            html body {
+            font-family: 'Roboto', Helvetica, Verdana, Sans-Serif;
+            font-size: 100%;
+            line-height: 1.5;
+            font-size-adjust: 0.58;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #2abba6;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233affe2' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+            color: #fafafa;
         }
-        h3 {
-            font-size: 1.5em;
-            padding-top: 3vh;
+        
+        a {
+            color: #fafafa;
+            text-decoration: underline;
+            cursor: pointer;
         }
-        /*    h4 {
-        font-size: 1.5em;
-    }*/
-        nav li {
-            padding: 1vw;
+        
+        a:hover {
+           color: #206157;
         }
-        nav {
-            top: 13vh;
+        
+        a:active {
+            color: #206157;
         }
-        header {
-            height: 20vh;
-        }
-        .avatar {
-            float: none;
-            width: 50vw;
-            padding-bottom: 1vw;
+        
+        article,
+        .center {
             display: block;
             margin: auto;
-            /* width: 40%;*/
-        }
-        #box {
-            border: 3px solid white;
-            border-radius: 3px;
-        }
-        .logofont {
-            max-width: 70vw;
-        }
-        .sozial {
-            font-size: 1.2em;
-            display: flex;
-            justify-content: space-around;
-        }
-        .deut,
-        .engl {
             width: auto;
+            max-width: 97vh;
         }
-        .text {
-            padding-bottom: 0;
+        
+        body {
+            line-height: 1.45;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;
         }
-        .deut {
-            padding-bottom: 1.5vh;
+        
+        figcaption {
+            text-align: center;
+            display: none;
         }
-        .engl {
+        
+        footer {
+            background-color: #2abba6;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233affe2' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+            padding-left: 2%;
+            padding-top: 2%;
+            padding-bottom: 1%;
+            border-left: 10px solid #2abba6;
+            border-right: 10px solid #2abba6;
+            border-bottom: 10px solid #2abba6;
+        }
+        
+        h3 {
+            font-size: 2em;
+            padding-top: 4vh;
             padding-bottom: 2vh;
         }
-        .past{
-        text-align: center;
-    }
-        @media only screen and (max-width: 400px) {
-            .up,
-            .down {
-                font-size: 25px;
-            }
+        
+        h4 {
+            font-size: 1.5em;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
+        
+        header {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 18vh;
+            transition: all .1s ease-in-out;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+            border-left: 10px solid #2abba6;
+            border-right: 10px solid #2abba6;
+            border-top: 10px solid #2abba6;
+        }
+        
+        header div.name {
+            transition: all .3s ease-in-out;
+            position: absolute;
+            left: 8px;
+            top: 0;
+        }
+        
+        header.verkleinert {
+            height: 4vh;
+            min-height: 50px;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 10000;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            background-color: #2abba6;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233affe2' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        header.verkleinert div.name {
+            top: -600px;
+        }
+        
+        header.verkleinert nav.current {
+            display: none;
+        }
+        
+        header.verkleinert nav {
+            height: 5vh;
+            min-height: 50px;
+            width: 100%;
+            top: 0;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        main {
+            overflow: auto;
+            width: auto;
+        }
+        
+        nav {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 12vh;
+        }
+        
+        nav ul {
+            list-style-type: none;
+        }
+        
+        nav li {
+            float: right;
+            font-size: 2.1em;
+            margin: 2vh, 0, 1vh, 0;
+        }
+        
+        section {
+            width: auto;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        span {
+            font-size: 0.7em;
+            font-style: italic;
+        }
+        
+        p {
+            font-size: 0.875em;
+            text-align: justify;
+        }
+        /*Classen*/
+        
+        .active {
+            color: #206157;
+        }
+        
+        .avatar {
+            float: right;
+            width: 30vw;
+            padding-right: 7vw;
+            max-width: 300px;
+        }
+        
+        #box {
+            border: 5px solid white;
+            border-radius: 5px;
+        }
+        
+        .logofont {
+            width: auto;
+        }
+        
+        .sozial {
+            font-size: 1.1em;
+            margin-top: 2vh;
+            display: flex;
+            justify-content: space-around;
+              text-shadow:-2px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .past {
+            padding-bottom: 2vh;
+        }
+        /*Menu classen*/
+        
+        .about {
+            padding-right: 5vw;
+        }
+        
+        .block {
+            padding-right: 5vw;
+        }
+        /*Text classen*/
+        
+        .descript {
+            width: auto;
+        }
+        
+        .descript::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .shadow{
+            text-shadow:-2px 1px 3px rgba(32, 97, 87, 0.2);
+        }
+        
+        .selected {
+            color: #64fcfa;
+        }
+        
+        .text {
+            float: left;
+            padding-bottom: 3vh;
+        }
+        
+        .lasttext {
+            float: left;
+            padding-bottom: 1vh;
+        }
+        
+        .deut {
+            width: 47%;
+            max-width: 700px;
+            padding-right: 20px;
+        }
+        
+        .engl {
+            width: 47%;
+            max-width: 700px;
+            font-style: italic;
+            color: #f6f6f6;
+        }
+        
+        .zero,
+        .one,
+        .two,
+        .three,
+        .last {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+        
+        .zero {
+            background-color: #8294fe;
+        }
+        
+        .one {
+            background-color: #f38e62;
+        }
+        
+        .two {
+            background-color: #b28de2;
+        }
+        
+        .three {
+            background-color: #f1be57;
+        }
+        
+        .last {
+            background-color: #35e4ca;
+        }
+        
+        #hiddenzero {
+            display: none;
+        }
+        
+        #hiddenone {
+            display: none;
+        }
+        
+        #hiddentwo {
+            display: none;
+        }
+        
+        #hiddenthree {
+            display: none;
+        }
+        
+        #hiddenlast {
+            display: none;
+        }
+        
+        @media only screen and (max-width: 800px) {
             nav li {
                 font-size: 1.5em;
             }
-            h4 {
-                font-size: 1em;
+            h3 {
+                font-size: 1.5em;
+                padding-top: 3vh;
             }
-        }
+            nav li {
+                padding: 1vw;
+            }
+            nav {
+                top: 13vh;
+            }
+            header {
+                height: 20vh;
+            }
+            .avatar {
+                float: none;
+                width: 50vw;
+                padding-bottom: 1vw;
+                display: block;
+                margin: auto;
+            }
+            #box {
+                border: 3px solid white;
+                border-radius: 3px;
+            }
+            .logofont {
+                max-width: 70vw;
+            }
+            .sozial {
+                font-size: 1.2em;
+            }
+            .deut,
+            .engl {
+                width: auto;
+            }
+            .text {
+                padding-bottom: 0;
+            }
+            .deut {
+                padding-bottom: 1.5vh;
+            }
+            .engl {
+                padding-bottom: 2vh;
+            }
+            .past {
+                text-align: center;
+            }
+            @media only screen and (max-width: 400px) {
+                .up,
+                .down {
+                    font-size: 25px;
+                }
+                nav li {
+                    font-size: 1.5em;
+                }
+                h4 {
+                    font-size: 1em;
+                }
+            }
