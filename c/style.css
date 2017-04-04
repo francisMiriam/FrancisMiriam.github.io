@@ -17,9 +17,6 @@
         cursor:pointer;
     }
     
-    nav li a {
-        /*    text-decoration: none;*/
-    }
     
     a:hover{
         color: #5ba3c5;
@@ -128,7 +125,7 @@ wenn also etwas runtergescroll wurde */
     
     header.verkleinert div.name {
         /* schiebt Name usw. nach links raus */
-        left: -600px;
+        top: -600px;
     }
     
     header.verkleinert nav.current {
@@ -190,6 +187,10 @@ wenn also etwas runtergescroll wurde */
 
     /*Classen*/
     
+    .active {
+        color: #5ba3c5;
+    }
+
     .avatar {
         float: right;
         width: 30vw;
