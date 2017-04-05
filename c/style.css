@@ -74,6 +74,7 @@
             left: 0;
             width: auto;
             height: 18vh;
+            min-height: 120px;
             transition: all .1s ease-in-out;
             box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
             border-left: 10px solid #2abba6;
@@ -178,6 +179,7 @@
         
         .logofont {
             width: auto;
+            padding-top: 0.5vh;
         }
         
         .sozial {
@@ -321,6 +323,7 @@
             }
             .logofont {
                 max-width: 70vw;
+
             }
             .sozial {
                 font-size: 1.2em;
