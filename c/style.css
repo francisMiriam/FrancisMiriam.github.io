@@ -19,6 +19,7 @@
         
         a:hover {
            color: #206157;
+            text-shadow:-2px 2.5px 1px rgba(250,250,250,0.5);
         }
         
         a:active {
