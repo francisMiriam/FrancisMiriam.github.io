@@ -120,13 +120,7 @@ html[xmlns] .slides {
   zoom: 1;
 }
 
-.flex-viewport {
-  /*  max-height: 85vh;*/
-  /*    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;*/
-}
+
 
 .loading .flex-viewport {
   max-height: 300px;
