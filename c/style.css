@@ -33,7 +33,7 @@
             margin: auto;
             width: auto;
             max-width: 97vh;
-            padding-bottom: 1.5em;
+            /* padding-bottom: 1.5em; */
         }
         
         body {
@@ -135,6 +135,7 @@
             height: auto;
             position: absolute;
             top: 12vh;
+            
         }
         
         nav ul {
@@ -144,7 +145,8 @@
         nav li {
             float: right;
             font-size: 1.5em;
-            margin: 1.5vh, 0, 0.8vh, 0;
+            /* margin: 1.5vh, 0, 0.8vh, 0; */
+            
         }
         
         section {
@@ -200,15 +202,18 @@
         
         .about {
             padding-right: 4vw;
+          
         }
         
         .block {
             padding-right: 3vw;
+         
         }
         /*Text classen*/
         
         .descript {
             width: auto;
+            padding-bottom: 6vw; 
         }
         
         .descript::after {
